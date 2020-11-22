@@ -3,8 +3,7 @@ from blog_arya import app,db
 
 @app.route("/")
 def home():
-    alpha_list=list=[chr(x) for x in range(65,91)]
-    return render_template("index.html",title="Arya Consultancy",alpha_list=alpha_list)
+    return render_template("index.html",title="Arya Consultancy")
 
 @app.route("/community")
 def community():
@@ -25,6 +24,38 @@ def hdp():
 def diy():
 
      return render_template("DIY.html",title="Arya Consultancy")
+
+@app.route("/student")
+def student():
+
+     return render_template("Student.html",title="Arya Consultancy")
+
+@app.route("/teacher")
+def teacher():
+
+     return render_template("Teachers.html",title="Arya Consultancy")
+
+@app.route("/employees")
+def employees():
+
+     return render_template("Employee.html",title="Arya Consultancy")
+
+
+@app.route("/smc")
+def smc():
+
+     return render_template("smc.html",title="Arya Consultancy")
+
+@app.route("/covid")
+def covid():
+
+     return render_template("covid.html",title="Arya Consultancy")
+
+@app.route("/parents")
+def parents():
+
+     return render_template("parents.html",title="Arya Consultancy")
+
 
 @app.route("/lc")
 def lc():
@@ -61,17 +92,19 @@ def index():
 
      return render_template("index.html",title="Arya Consultancy")
 
+
+@app.route("/studentassessment")
+def studentassessment():
+
+     return render_template("index.html",title="Arya Consultancy")
+
+
 @app.route("/about")
 def About():
 
     return render_template("index.html",title="Arya Consultancy")
 
-# @app.route("/")
-#
-# def index():
-#
-#     msg = Message("Hello",
-#                   sender="siddharth24092001@gmail.com")
+
 
 
 

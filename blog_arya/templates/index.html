@@ -23,8 +23,77 @@
   <link href="{{ url_for('static',filename='assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   <link href="{{ url_for('static',filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
 
+
   <!-- Template Main CSS File -->
   <link href="{{ url_for('static',filename='assets/css/style.css')}}" rel="stylesheet">
+
+<!--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+<!--    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .Portfolio {
+    position: relative;
+    margin: 5px;
+    border: 2px solid black;
+    float: left;
+    width: 180px;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    animation: winanim 0.5s ;
+-webkit-backface-visibility:visible;
+    backface-visibility:visible;
+    box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12)
+}
+
+.Portfolio:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.Portfolio img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px
+}
+
+.desc {
+    padding: 5px;
+    text-align: center;
+    font-size: 90%;
+    background:black;
+    color:black
+}
+
+.nav {
+    padding:20px;
+    margin-left:340px;
+    margin-top:-30px;
+}
+
+.nav li a {
+    margin:5px;
+    padding: 15px 50px;
+    font-size:16px;
+    color:blue;
+    transition-duration: 0.4s;
+}
+.nav a:hover {
+    background:hotpink
+}
+.nav .active {
+    background-color:hotpink !important;
+    color:#fff;
+}
+
+@keyframes winanim {
+    0%{opacity:0;transform:scale3d(.3,.3,.3)}
+    50%{opacity:1}
+
+}
+    </style>
+
 
 
   <!-- =======================================================
@@ -37,6 +106,9 @@
 </head>
 
 <body>
+
+
+
 
   <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top topbar-transparent">
     <div class="container d-flex justify-content-end">
@@ -54,7 +126,7 @@
     <div class="container d-flex align-items-center">
         <link href="{{ url_for('static',filename='assets/img/logo1.jpg')}}" rel="icon">
         <img src="{{ url_for('static',filename='assets/img/logo1.jpg')}}"  height="80px" width="80px" rel="apple-touch-icon">
-      <h1  style="text-shadow:2px 2px black" class="logo mr-auto"><b>Arya</b><br><b> Consultancy</b></h1>
+        <p  style="text-shadow:2px 2px black"  class="logo mr-auto"><b>Arya</b><br><b> Consultancy</b></p>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="{{url_for('static',filename='assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
 
@@ -64,29 +136,12 @@
             <li class="active"><a href="{{url_for('index')}}"><b>Home</b></a></li>
             <li><a href="#about"><b>About Us</b></a></li>
             <li><a href="#services"><b>Programs/Projects</b></a>
-            <ul>
-<!--              <li><a href="#">Educational and awarness program</a></li>-->
-<!--              <li><a href="{{url_for('static',filename='assets/docx/gyandeep.pdf') }}" target="_blank">Gyan Deep Program</a></li>-->
-<!--              <li class="drop-down"><a href="#" target="_blank">Education and awarness program</a>-->
-<!--                    <ul>-->
-<!--                        <li><a href="{{url_for('static',filename='assets/docx/studentassessment.pdf')}}" target="_blank">Student Assessment</a></li>-->
-<!--                        <li><a href="{{url_for('static',filename='assets/docx/Training for Capacity Building(1).pdf')}}" target="_blank">Training for capacity building</a></li>-->
-<!--                        <li><a href="{{url_for('static',filename='assets/docx/Intreactive learning method(final).pdf')}}" target="_blank">Intreactive learning method</a></li>-->
-<!--                        <li><a href="{{url_for('static',filename='assets/docx/SMC.pdf')}}" target="_blank">SMC Strengthening Program </a></li>-->
-<!--                        <li><a href="{{url_for('static',filename='assets/docx/option4.pdf')}}" target="_blank">Social Awareness Program </a></li>-->
 
-<!--                    </ul>-->
-<!--              </li>-->
-<!--              <li><a href="{{url_for('static',filename='assets/docx/hdp.docx')}}" target="_blank">Holistic development program</a></li>-->
-<!--              <li><a href="{{url_for('static',filename='assets/docx/diy.ppt')}}" target="_blank">Do It Yourself program</a></li>-->
-<!--              <li><a href="{{url_for('static',filename='assets/docx/CSR progra.pdf')}}" >CSR Program Implementation</a></li>-->
-            </ul>
           </li>
 
 <!--          <li><a href="#services">Services</a></li>-->
-          <li><a href="#portfolio"><b>Gallery</b></a></li>
+          <li><a href="#portfolio"><b>Our Work</b></a></li>
           <li><a href="#team"><b>Team</b></a></li>
-
           <li><a href="#footer"><b>Contact Us</b></a></li>
 
           <li><a href="#footer"></a></li>
@@ -110,7 +165,7 @@
         </div>
 
         <div class=" col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{url_for('static',filename='assets/img/img3.jpg')}}"  width="500"  height="400" alt="" class="img-fluid">
+          <img src="{{url_for('static',filename='assets/img/topimage.jpg')}}"  width="600"  height="900" alt="" class="img-fluid">
         </div>
       </div>
 
@@ -134,8 +189,8 @@
           <div class="col-lg-7 col-md-6">
             <div class="about-content" data-aos="fade-left" data-aos-delay="100">
               <h2><center style="font-size:40px">About us</center></h2>
-                <center style="font-size:30px" ><b style="text-shadow:2px 2px blue;"><u>VISION</u></b></center><p style="color:red;"><b><br>"To prepare and motivate our students for a rapid changing world by intilling in them critical thinking skills a global prospective  and a respect for core values of honesty loyalty preservance and compassion.Student will have success for today and be preapred for tommorrow."</b></p>
-                <center style="font-size:30px"><b style="text-shadow:2px 2px blue;"><u>MISSION</u></b></center>
+                <center style="font-size:30px" ><b style="text-shadow:2px 2px black;"><u>VISION</u></b></center><p style="color:red;"><b><br>"To prepare and motivate our students for a rapid changing world by intilling in them critical thinking skills a global prospective  and a respect for core values of honesty loyalty preservance and compassion.Student will have success for today and be preapred for tommorrow."</b></p>
+                <center style="font-size:30px"><b style="text-shadow:2px 2px black;"><u>MISSION</u></b></center>
                 <p><b>Engagement.... Discovery.. Learning..</b></p>
                     <p style="color:red;"><b>"When learning  is purposeful,creativity blossoms.When creactivtiy blossoms thinking emanates.When thinking emanates knowledge is fully lit.When knowledge is lit, economy flourishes"</p>
               <p>We have been working closely with Gov./Non gov. & CSR initiatives as an Implementing agency with: </p>
@@ -156,7 +211,7 @@
                 <li><i class="ion-android-checkmark-circle"></i>Om Jagdamba Foundation-Shree Jagadamba Polymers Ltd.</li>
                 <li><i class="ion-android-checkmark-circle"></i>Welspun Foundation For health and Knowledge-Welspun India ltd.</li>
               </ul>
-                <center style="font-size:30px"><p style="text-shadow:2px 2px blue"><u>Core Values</u></p></center>
+                <center style="font-size:30px"><p style="text-shadow:2px 2px black"><u>Core Values</u></p></center>
                 <ul>
                     <li>1) Quality in achievements and learning.</li>
                     <li>2) Intergrity in professional relations and in leadership </li>
@@ -180,10 +235,7 @@
           <h3><b> Programs and Projects</b></h3>
           <p>These are our some special programs.</p>
 
-          <a href="#">Student &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      Teachers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      Employees&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      Parents&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
 
            <p>&nbsp;&nbsp;</p>
         </header>
@@ -193,7 +245,7 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title" ><a href="gyandeep" >Gyan Deep Program </a></h4>
+              <h4 class="title" ><a href="student" >Students </a></h4>
 <!--              <p class="description">Arya consultancy will conduct programs to influence parents’ community to enhance their-->
 <!--participation &amp; support in their child’s education.</p>-->
             </div>
@@ -202,7 +254,7 @@
           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="education">Education and Awarness Program</a></h4>
+              <h4 class="title"><a href="teacher">Teachers</a></h4>
 <!--              <p class="description">Employees are back bone of the company. Each employee is important for the company.</p>-->
             </div>
           </div>
@@ -210,7 +262,7 @@
           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="box">
               <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="hdp">Holistic Development Program</a></h4>
+              <h4 class="title"><a href="employees">Employees</a></h4>
 <!--              <p class="description">To evolve a high school program that provides high quality-->
 <!--education that enable high school students to perform better in GSEB board exams-->
 <!--and join higher secondary school to pursue their academic and career aspirations.</p>-->
@@ -219,75 +271,28 @@
 
           <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
-              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="diy">Do It Yourself Program</a></h4>
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-analytics-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="parents">Parents</a></h4>
 <!--              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>-->
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class=" box">
-                <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
-                <h4 class="title"><a href="csr">CSR Prgram Implementation</a></h4>
-    <!--            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>-->
-            </div>
-          </div>
-
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-              <div class="box">
-                 <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
-                <h4 class="title"><a href="eep">Employee Engagement Program</a></h4>
-<!--                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>-->
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
-              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="bridge">Bridge course for High school Program</a></h4>
-<!--              <p class="description">Employees are back bone of the company. Each employee is important for the company.</p>-->
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-bookmarks-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="covid">COVID-19</a></h4>
+<!--              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>-->
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
-              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="lc">Learning Centre in the Village/Slum</a></h4>
-<!--              <p class="description">Employees are back bone of the company. Each employee is important for the company.</p>-->
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-paper-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="smc">SMC Training</a></h4>
+<!--              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>-->
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="aganwadi">Anganwadi Development/Support Program</a></h4>
-<!--              <p class="description">Employees are back bone of the company. Each employee is important for the company.</p>-->
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title">COVID-19 Awareness Program</h4>
-<!--              <p class="description">Employees are back bone of the company. Each employee is important for the company.</p>-->
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title">Vocational and Livelihood Program</h4>
-<!--              <p class="description">Employees are back bone of the company. Each employee is important for the company.</p>-->
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title">Principal Capacity Building Program</h4>
-<!--              <p class="description">Employees are back bone of the company. Each employee is important for the company.</p>-->
-            </div>
-          </div>
 
       </div>
 
@@ -308,7 +313,7 @@
 
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="why-us-img">
-              <img src="{{url_for('static',filename='assets/img/classroom.jpg')}}" alt="" class="img-fluid">
+              <img src="{{url_for('static',filename='assets/img/B15.jpg')}}" width="600px" height="400px" alt="" class="img-fluid">
             </div>
           </div>
 
@@ -352,231 +357,298 @@
 
       </div>
 
-        <div class="container">
-        <div class="row counters" data-aos="fade-up" data-aos-delay="20">
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">19</span>
-              <p><b>Working Partners</b></p>
-          </div>
+<!--       </div>-->
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">41</span>
-            <p>Schools</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">84</span>
-            <p>Anganwadis</p>
-          </div>
-
-          <!--<div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">18</span>
-            <p>Hard Workers</p>
-          </div>-->
-
-        </div>
-
-      </div>
+<!--      </div>-->
     </section><!-- End Why Us Section -->
 
     <!-- ======= Features Section ======= -->
+    <center style="font-size:30px"><b>Process To Increase Student's Learning Level</b></center>
     <section id="features" class="features">
       <div class="container" data-aos="fade-up">
 
         <div class="row feature-item">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <img src="{{url_for('static',filename='assets/img/space.JPG')}}" width="900px" height="800px" class="img-fluid" alt="" >
+
+            <img src="{{url_for('static',filename='assets/img/space.JPG')}}" width="900px" height="800px" class="img-fluid" alt="centered image" >
           </div>
           <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0" data-aos="fade-left" data-aos-delay="150">
-<!--            <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>-->
-<!--            <p>-->
-<!--              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.-->
-<!--            </p>-->
-<!--            <p>-->
-<!--              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.-->
-<!--            </p>-->
+
           </div>
         </div>
 
 
 
-        </div>
-
       </div>
+
     </section><!-- End Features Section -->
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
+<!-- Portfolio section-->
+  <section id="portfolio" class="portfolio section-bg">
+    <div class="container-fluid" style="margin-top:20px;">
+        <h1 style="text-align:center;color:black;"><b>Our Work</b></h1><br>
+<div class="row">
 
-        <header class="section-header">
-          <h3 class="section-title">Gallery</h3>
-        </header>
+  <div style="center">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="showall-tab" data-toggle="pill" href="#showall" role="tab" aria-controls="showall" aria-selected="true">Show All</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="student-tab" data-toggle="pill" href="#student" role="tab" aria-controls="student" aria-selected="false">Student Assessment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="teacher-tab" data-toggle="pill" href="#teacher" role="tab" aria-controls="teacher" aria-selected="false">Teacher's Capacity Building</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tech-tab" data-toggle="pill" href="#tech" role="tab" aria-controls="tech" aria-selected="false">Technology Training</a>
+      </li>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-
-            </ul>
-          </div>
-        </div>
-
-<!--         {% for i in alpha_list %}-->
-
-<!--                    <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{i}}</a>-->
-
-<!--              {% endfor %}-->
-         <p><br></p>
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/img1.JPG')}}" class="img-fluid" alt="">
-<!--              <div class="portfolio-info">-->
-<!--                <h4><a href="portfolio-details.html">App 1</a></h4>-->
-<!--                <p>App</p>-->
-<!--&lt;!&ndash;                <div>&ndash;&gt;-->
-<!--&lt;!&ndash;                  <a href="{{url_for('static',filename='assets//img/portfolio/app1.jpg')}}" data-gall="Gallery" title="App 1" class="link-preview venobox"><i class="ion ion-eye"></i></a>&ndash;&gt;-->
-<!--&lt;!&ndash;                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--              </div>-->
-<!--            </div>-->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/img2.JPG')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-<!--                <h4><a href="portfolio-details.html">Web 3</a></h4>-->
-<!--                <p>Web</p>-->
-                <div>
-
-
-<!--                  <a href="{{url_for('static',filename='assets/img/portfolio/web3.jpg')}}" class="link-preview venobox" data-gall="Gallery" title="Web 3"><i class="ion ion-eye"></i></a>-->
-<!--                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
-                </div>
-              </div>
-<!--            </div>-->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/portfolio/pic1.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-<!--                <h4><a href="portfolio-details.html">App 2</a></h4>-->
-<!--                <p>App</p>-->
-                <div>
-                  <a href="{{url_for('static',filename='assets/img/portfolio/pic2.jpg')}}" class="link-preview venobox" data-gall="Gallery" ></a>
-<!--                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
-                </div>
-              </div>
-<!--            </div>-->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/img3.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-<!--                <h4><a href="portfolio-details.html">Card 2</a></h4>-->
-<!--                <p>Card</p>-->
-                <div>
-<!--                  <a href="{{url_for('static',filename='assets/img/portfolio/card2.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="Card 2"><i class="ion ion-eye"></i></a>-->
-<!--                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
-                </div>
-              </div>
-<!--            </div>-->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/img4.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-<!--                <h4><a href="portfolio-details.html">Web 2</a></h4>-->
-<!--                <p>Web</p>-->
-                <div>
-<!--                  <a href="{{url_for('static',filename='assets/img/portfolio/web2.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="Web 2"><i class="ion ion-eye"></i></a>-->
-<!--                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
-                </div>
-              </div>
-<!--            </div>-->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/img5.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-<!--                <h4><a href="portfolio-details.html">App 3</a></h4>-->
-<!--                <p>App</p>-->
-                <div>
-<!--                  <a href="{{url_for('static',filename='assets/img/portfolio/app3.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="App 3"><i class="ion ion-eye"></i></a>-->
-<!--                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
-                </div>
-              </div>
-<!--            </div>-->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/pic5.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-<!--                <h4><a href="portfolio-details.html">Card 1</a></h4>-->
-<!--                <p>Card</p>-->
-                <div>
-<!--                  <a href="{{url_for('static',filename='assets/img/portfolio/card1.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="Card 1"><i class="ion ion-eye"></i></a>-->
-<!--                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
-                </div>
-              </div>
-<!--            </div>-->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/portfolio/pic3.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-<!--                <h4><a href="portfolio-details.html">Card 3</a></h4>-->
-<!--                <p>Card</p>-->
-                <div>
-<!--                  <a href="{{url_for('static',filename='assets/img/portfolio/card3.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="Card 3"><i class="ion ion-eye"></i></a>-->
-<!--                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
-                </div>
-              </div>
-<!--            </div>-->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
-<!--            <div class="portfolio-wrap">-->
-              <img src="{{url_for('static',filename='assets/img/portfolio/pic4.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-<!--                <h4><a href="portfolio-details.html">Web 1</a></h4>-->
-<!--                <p>Web</p>-->
-                <div>
-<!--                  <a href="{{url_for('static',filename='assets/img/portfolio/web1.jpg')}}" class="link-preview venobox" data-gall="portfolioGallery" title="Web 1"><i class="ion ion-eye"></i></a>-->
-<!--                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
-                </div>
-              </div>
-<!--            </div>-->
-          </div>
-
-
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" id="SMC-tab" data-toggle="pill" href="#SMC" role="tab" aria-controls="SMC" aria-selected="false">SMC Training</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="community-tab" data-toggle="pill" href="#community" role="tab" aria-controls="community" aria-selected="false">Community Engagement</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="social-tab" data-toggle="pill" href="#social" role="tab" aria-controls="social" aria-selected="false">Social Awarness</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="learning-tab" data-toggle="pill" href="#learning" role="tab" aria-controls="learning" aria-selected="false">Learning Center</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="event-tab" data-toggle="pill" href="#event" role="tab" aria-controls="event" aria-selected="false">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="recog-tab" data-toggle="pill" href="#recog" role="tab" aria-controls="recog" aria-selected="false">Recognization</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="students-tab" data-toggle="pill" href="#students" role="tab" aria-controls="students" aria-selected="false">Student Engagement</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="principal-tab" data-toggle="pill" href="#principal" role="tab" aria-controls="principal" aria-selected="false">Principal Engagement</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="covid-tab" data-toggle="pill" href="#covid" role="tab" aria-controls="covid" aria-selected="false">Covid-19</a>
+      </li>
+    </ul>
+  </div>
+</div>
+        <hr noshade style="margin-top:-20px;">
+<div class="container">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg11.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K6.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K7.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K8.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K9.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R6.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/L7.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K8.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/L7.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/Q1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M5.jpg')}}" alt=""></div>
+         <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P27.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P26.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P28.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P30.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P31.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P34.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P39.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P40.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/G5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F33.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/A5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B22.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B15.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B10.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B8.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W6.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/E1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/E9.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F6.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v17.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v16.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v15.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v14.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v13.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/V12.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO3.jpg')}}" alt=""></div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+      <div class="tab-pane fade" id="student" role="tabpanel" aria-labelledby="student-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R5.jpg')}}" alt=""></div>
+      </div>
+      <div class="tab-pane fade" id="teacher" role="tabpanel" aria-labelledby="teacher-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/L7.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K8.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K3.jpg')}}" alt=""></div>
+      </div>
+      <div class="tab-pane fade" id="tech" role="tabpanel" aria-labelledby="tech-tab">
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/Q1.jpg')}}" alt=""></div>
 
-    </section><!-- End Testimonials Section -->
+      </div>
 
-    <!-- ======= Team Section ======= -->
+      <div class="tab-pane fade" id="SMC" role="tabpanel" aria-labelledby="smc-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M5.jpg')}}" alt=""></div>
+      </div>
+
+      <div class="tab-pane fade" id="community" role="tabpanel" aria-labelledby="community-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c5.jpg')}}" alt=""></div>
+      </div>
+
+      <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="social-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P27.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P26.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P28.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P30.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P31.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P34.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P39.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P40.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P40.jpg')}}" alt=""></div>
+      </div>
+
+      <div class="tab-pane fade" id="learning" role="tabpanel" aria-labelledby="learning-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/G5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F33.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/A5.jpg')}}" alt=""></div>
+
+      </div>
+
+      <div class="tab-pane fade" id="event" role="tabpanel" aria-labelledby="event-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B22.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B15.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B10.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B8.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M2.jpg')}}" alt=""></div>
+
+      </div>
+
+      <div class="tab-pane fade" id="recog" role="tabpanel" aria-labelledby="recog-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W6.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C4.jpg')}}" alt=""></div>
+
+      </div>
+
+      <div class="tab-pane fade" id="students" role="tabpanel" aria-labelledby="students-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/E1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/E9.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F6.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F4.jpg')}}" alt=""></div>
+
+      </div>
+
+      <div class="tab-pane fade" id="principal" role="tabpanel" aria-labelledby="principal-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v17.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v16.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v15.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v14.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v13.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/V12.jpg')}}" alt=""></div>
+
+      </div>
+      <div class="tab-pane fade" id="covid" role="tabpanel" aria-labelledby="covid-tab">
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO3.jpg')}}" alt=""></div>
+
+
+      </div>
+    </div>
+
+   </div>
+
+ </div>
+</section>
+
+<!--End portfolio section-->
+
+
+
+
+
+
+
+  <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
          <div class="section-header">
-          <h3>Team</h3>
-<!--          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
-        </div>
+            <h3>Team</h3>
+         </div>
 
                 <div class="row">
 
@@ -588,19 +660,18 @@
                                              <center style="font-size:15px"><u>Qualification</u></center>
                                             <p>M.A in Education at Tata Institute of Social
 
-Sciences
-B.Ed. with Accountancy &amp; Management from
-Gujarat University
-M.Com with Accountancy &amp; Management from
-Gujarat University 1993-1995</p>
-<!--                                            <p class="card-text">.</p>-->
-                                             <center style="font-size:15px"><u>Nature of work</u></center>
-                                 <p>--> Implementation of Education program in Government
-schools <br>-->Coordination and follow up of education program in
-Government school with implementing partners<br>-->As a Resource In Charge<br>-->Team Leader for Government intervention program</p>
-                                              <center style="font-size:15px"><u>Years of Experience</u></center>
-                          <p>22 years</p>
-                            <!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                                    Sciences
+                                                    B.Ed. with Accountancy &amp; Management from
+                                                    Gujarat University
+                                                    M.Com with Accountancy &amp; Management from
+                                                    Gujarat University 1993-1995</p>
+                                                    <!--                                            <p class="card-text">.</p>-->
+                                                                                                 <center style="font-size:15px"><u>Nature of work</u></center>
+                                                                                     <p>--> Implementation of Education program in Government
+                                                    schools <br>-->Coordination and follow up of education program in
+                                                    Government school with implementing partners<br>-->As a Resource In Charge<br>-->Team Leader for Government intervention program</p>
+                                                                                                  <center style="font-size:15px"><u>Years of Experience</u></center>
+                                                                              <p>22 years</p>
                                           </div>
                                     </div>
                   </div>
@@ -622,34 +693,9 @@ Government school with implementing partners<br>-->As a Resource In Charge<br>--
                            <p>--> Handling Operations <br>-->Curriculum Head<br>-->Data Management</p>
                            <center style="font-size:15px"><u>Years of Experience</u></center>
                           <p>22 years</p>
-
-        <!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
                       </div>
                     </div>
                   </div>
-
-                  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/nilangv.JPG')}}" alt="Card image cap">
-                                          <div class="card-body">
-                                              <h5 class="card-title"><b>Mr.Nilang Vyas</b></h5>
-                                             <center style="font-size:15px"><u>Qualification</u></center>
-                                            <p>B.Sc.
-B.Ed.
-MCA</p>
-<!--                                            <p class="card-text">.</p>-->
-                                             <center style="font-size:15px"><u>Nature of work</u></center>
-                                 <p>-->Educational Specialist, English Language as a Content
-
-Developer and Teacher Trainer<br>--Curriculum Design and learning material development for
-Elementary Language.</p>
-                                              <center style="font-size:15px"><u>Years of Experience</u></center>
-                          <p>20 years</p>
-                            <!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
-                                          </div>
-                                    </div>
-                  </div>
-
 
                   <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="card" style="width: 18rem;">
@@ -672,25 +718,29 @@ Elementary Language.</p>
                   </div>
 
 
+
+
+
+
+
                   <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div class="card" style="width: 18rem;">
                               <img class="card-img-top" src="{{url_for('static',filename='assets/img/swetalgajjar.jpg')}}" alt="Card image cap">
                                   <div class="card-body">
-                                      <h5 class="card-title"><b>Mrs Shwetal Gajjar</b></h5>
-                                      <center style="font-size:15px"><u>Qualification</u></center>
-                                    <p class="card-text">M.Phil. (Gujarati)
-Diploma in Linguistics
-M.A. (Gujarati)
-B.Ed. (Gujarati main subject)</p>
-                                 <center style="font-size:15px"><u>Nature of work</u></center>
-                                 <p>--> Educational Specialist, Mind spark Language as a Content
-Developer and Teacher Trainer <br>-->Curriculum Design and learning material development for
-Elementary Language<br>-->Teacher training</p>
-                                      <center style="font-size:15px"><u>Years of Experience</u></center>
-                          <p>12 years</p>
+                                                                          <h5 class="card-title"><b>Mrs Shwetal Gajjar</b></h5>
+                                                                          <center style="font-size:15px"><u>Qualification</u></center>
+                                                                        <p class="card-text">M.Phil. (Gujarati)
+                                    Diploma in Linguistics
+                                    M.A. (Gujarati)
+                                    B.Ed. (Gujarati main subject)</p>
+                                                                     <center style="font-size:15px"><u>Nature of work</u></center>
+                                                                     <p>--> Educational Specialist, Mind spark Language as a Content
+                                    Developer and Teacher Trainer <br>-->Curriculum Design and learning material development for
+                                    Elementary Language<br>-->Teacher training</p>
+                                                                          <center style="font-size:15px"><u>Years of Experience</u></center>
+                                                              <p>12 years</p>
 
-                    <!--                <a href="#" class="btn btn-primary"></a>-->
-                                  </div>
+                                 </div>
                             </div>
                   </div>
 
@@ -701,44 +751,63 @@ Elementary Language<br>-->Teacher training</p>
                                     <div class="card" style="width: 18rem;">
                                       <img class="card-img-top" src="{{url_for('static',filename='assets/img/parulg.jpg')}}" alt="Card image cap">
                                           <div class="card-body">
-                                              <h5 class="card-title"><b>Mrs.Parul Ghoghari</b></h5>
-                                             <center style="font-size:15px"><u>Qualification</u></center>
-                                            <p>English Training program –
-AMA,Ahmedabad
-M.Com.
-Jivan Vidya Program</p>
-<!--                                            <p class="card-text">.</p>-->
-                                             <center style="font-size:15px"><u>Nature of work</u></center>
-                                 <p>--> Involved in field operations covering more than 500 class
-in urban slum to support and develop teachers and
-supervisor to provide quality education to underprivileged
-children.
-schools <br>--Oversight field operations for effective implementation of
-school program.<br>-->As a teacher in elide English medium school.</p>
-                                              <center style="font-size:15px"><u>Years of Experience</u></center>
-                          <p>20 years</p>
-                            <!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                                                                                  <h5 class="card-title"><b>Mrs.Parul Ghoghari</b></h5>
+                                                                                                 <center style="font-size:15px"><u>Qualification</u></center>
+                                                                                                <p>English Training program –
+                                                    AMA,Ahmedabad
+                                                    M.Com.
+                                                    Jivan Vidya Program</p>
+                                                    <!--                                            <p class="card-text">.</p>-->
+                                                                                                 <center style="font-size:15px"><u>Nature of work</u></center>
+                                                                                     <p>--> Involved in field operations covering more than 500 class
+                                                    in urban slum to support and develop teachers and
+                                                    supervisor to provide quality education to underprivileged
+                                                    children.
+                                                    schools <br>--Oversight field operations for effective implementation of
+                                                    school program.<br>-->As a teacher in elide English medium school.</p>
+                                                                                                  <center style="font-size:15px"><u>Years of Experience</u></center>
+                                                                              <p>20 years</p>
                                           </div>
                                     </div>
-                  </div>
+                    </div>
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
                                       <img class="card-img-top" src="{{url_for('static',filename='assets/img/parulj.JPG')}}" alt="Card image cap">
                                           <div class="card-body">
-                                              <h5 class="card-title"><b>Mrs.Parul Joshi</b></h5>
-                                             <center style="font-size:15px"><u>Qualification</u></center>
-                                            <p>M.A.(English)</p>
-<!--                                            <p class="card-text">.</p>-->
-                                             <center style="font-size:15px"><u>Nature of work</u></center>
-                                 <p>-->Educational Specialist, English Language as a Content
+                                                                                          <h5 class="card-title"><b>Mrs.Parul Joshi</b></h5>
+                                                                                         <center style="font-size:15px"><u>Qualification</u></center>
+                                                                                        <p>M.A.(English)</p>
+                                            <!--                                            <p class="card-text">.</p>-->
+                                                                                         <center style="font-size:15px"><u>Nature of work</u></center>
+                                                                             <p>-->Educational Specialist, English Language as a Content
 
-Developer and Teacher Trainer<br>--Oversight field operations for effective implementation of
-school program.<br>-->Curriculum Design and learning material development for
-Elementary Language</p>
-                                              <center style="font-size:15px"><u>Years of Experience</u></center>
-                          <p>15 years</p>
-                            <!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                            Developer and Teacher Trainer<br>--Oversight field operations for effective implementation of
+                                            school program.<br>-->Curriculum Design and learning material development for
+                                            Elementary Language</p>
+                                                                                          <center style="font-size:15px"><u>Years of Experience</u></center>
+                                                                      <p>15 years</p>
+                                          </div>
+                                    </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card" style="width: 18rem;">
+                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/nilangv.JPG')}}" alt="Card image cap">
+                                          <div class="card-body">
+                                                                                          <h5 class="card-title"><b>Mr.Nilang Vyas</b></h5>
+                                                                                         <center style="font-size:15px"><u>Qualification</u></center>
+                                                                                        <p>B.Sc.
+                                            B.Ed.
+                                            MCA</p>
+                                            <!--                                            <p class="card-text">.</p>-->
+                                                                                         <center style="font-size:15px"><u>Nature of work</u></center>
+                                                                             <p>-->Educational Specialist, English Language as a Content
+
+                                            Developer and Teacher Trainer<br>--Curriculum Design and learning material development for
+                                            Elementary Language.</p>
+                                                                                          <center style="font-size:15px"><u>Years of Experience</u></center>
+                                                                      <p>20 years</p>
                                           </div>
                                     </div>
                   </div>
@@ -749,32 +818,24 @@ Elementary Language</p>
                                     <div class="card" style="width: 18rem;">
                                       <img class="card-img-top" src="{{url_for('static',filename='assets/img/parull.jpg')}}" height="200px" alt="Card image cap">
                                           <div class="card-body">
-                                              <h5 class="card-title"><b>Mrs.Payal Patel</b></h5>
-                                             <center style="font-size:15px"><u>Qualification</u></center>
-                                            <p>M.Sc. Botany
+                                                                                              <h5 class="card-title"><b>Mrs.Payal Patel</b></h5>
+                                                                                             <center style="font-size:15px"><u>Qualification</u></center>
+                                                                                            <p>M.Sc. Botany
 
-B.Ed. (Mathematics and Science)</p>
-<!--                                            <p class="card-text">.</p>-->
-                                             <center style="font-size:15px"><u>Nature of work</u></center>
-                                 <p>-->Curriculum Design and learning material development for
-Math up to high school<br>--Training of people with various capacities and roles to
-implement education program for underprivileged children..</p>
-                                              <center style="font-size:15px"><u>Years of Experience</u></center>
-                          <p>12 years</p>
-                            <!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                                B.Ed. (Mathematics and Science)</p>
+                                                                                             <center style="font-size:15px"><u>Nature of work</u></center>
+                                                                                 <p>-->Curriculum Design and learning material development for
+                                                Math up to high school<br>--Training of people with various capacities and roles to
+                                                implement education program for underprivileged children..</p>
+                                                                                              <center style="font-size:15px"><u>Years of Experience</u></center>
+                                                                          <p>12 years</p>
                                           </div>
                                     </div>
-                  </div>
-
-
-
+                    </div>
                 </div>
-               </div>
-
-
-
-    </div>
+      </div>
     </section><!-- End Team Section -->
+
 
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
