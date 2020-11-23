@@ -1,4 +1,4 @@
-from  flask import Flask,render_template,redirect,url_for,flash,request,jsonify
+from  flask import Flask,render_template
 from blog_arya import app,db
 
 @app.route("/")
@@ -14,6 +14,22 @@ def community():
 def gyandeep():
 
      return render_template("gyandeep.html",title="Arya Consultancy")
+
+
+@app.route("/planning")
+def planning():
+
+     return render_template("planning.html",title="Arya Consultancy")
+
+@app.route("/upgradation")
+def upgradation():
+
+     return render_template("upgradation.html",title="Arya Consultancy")
+
+@app.route("/translation")
+def translation():
+
+     return render_template("translation.html",title="Arya Consultancy")
 
 @app.route("/hdp")
 def hdp():
