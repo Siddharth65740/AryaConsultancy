@@ -34,10 +34,10 @@
     <style>
         .Portfolio {
                         position: relative;
-                        margin: 5px;
+                        margin: 2px;
                         border: 2px solid black;
                         float: left;
-                        width: 180px;
+                        width: 250px;
                         transition-duration: 0.4s;
                         border-radius: 5px;
                         animation: winanim 0.5s ;
@@ -66,22 +66,23 @@
 
 .nav {
     padding:20px;
-    margin-left:340px;
+    margin-left:100px;
     margin-top:-30px;
 }
 
 .nav li a {
     margin:5px;
-    padding: 15px 50px;
+    padding:10px 5px 15px 20px;
     font-size:16px;
     color:blue;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
 }
 .nav a:hover {
     background:hotpink
 }
 .nav .active {
     background-color:hotpink !important;
+    padding:10px;
     color:#fff;
 }
 
@@ -91,6 +92,8 @@
 
 }
     </style>
+
+
 
 
 
@@ -117,23 +120,22 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-transparent">
     <div class="container d-flex align-items-center">
-        <link href="{{ url_for('static',filename='assets/img/logo1.jpg')}}" rel="icon">
-        <img src="{{ url_for('static',filename='assets/img/logo1.jpg')}}"  height="80px" width="80px" rel="apple-touch-icon">
-        <p  style="text-shadow:2px 2px black"  class="logo mr-auto"><b>Arya</b><br><b> Consultancy</b></p>
+        <link href="static/assets/img/logo1.jpg" rel="icon">
+<!--        <img src="{{ url_for('static',filename='assets/img/logo1.jpg')}}"  height="30px" width="20px" rel="apple-touch-icon">-->
+        <p  style="text-shadow:1px 1px black"  class="logo mr-auto"><b><img src="{{ url_for('static',filename='assets/img/logo1.jpg')}}" alt="" width="60px">Arya</b><br><b> Consultancy</b></p>
 
       <nav class="main-nav d-none d-lg-block">
         <ul>
 
             <li class="active"><a href="{{url_for('index')}}"><b>Home</b></a></li>
             <li><a href="#about"><b>About Us</b></a></li>
-            <li><a href="#services"><b>Programs/Projects</b></a>
 
-          </li>
+            <li><a href="#services"><b>Programs/Projects</b></a></li>
+            <li><a href="#advisor"><b>Our Advisor</b></a></li>
+            <li><a href="#portfolio"><b>Our Work</b></a></li>
+            <li><a href="#team"><b>Team</b></a></li>
+            <li><a href="#footer"><b>Contact Us</b></a></li>
 
-
-          <li><a href="#portfolio"><b>Our Work</b></a></li>
-          <li><a href="#team"><b>Team</b></a></li>
-          <li><a href="#footer"><b>Contact Us</b></a></li>
 
           <li><a href="#footer"></a></li>
           <li><a href="#footer"></a></li>
@@ -156,7 +158,7 @@
         </div>
 
         <div class=" col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{url_for('static',filename='assets/img/topimage.jpg')}}"  width="600"  height="900" alt="" class="img-fluid">
+          <img src="static/assets/img/topimage.jpg"  width="600"  height="900" alt="" class="img-fluid">
         </div>
       </div>
 
@@ -173,7 +175,7 @@
 
           <div class="col-lg-5 col-md-6">
             <div class="about-img" data-aos="fade-right" data-aos-delay="100">
-              <img src="{{url_for('static',filename='assets/img/capture.jpg')}}" alt="">
+              <img src="static/assets/img/capture.jpg" alt="">
             </div>
           </div>
 
@@ -369,12 +371,125 @@
 <!--      </div>-->
     </section><!-- End Why Us Section -->
 
+
+
+
+   <!-- ======= advisor Section ======= -->
+    <section id="advisor" class="advisor section-bg">
+      <div class="container" data-aos="fade-up">
+         <div class="section-header">
+            <h3 style="font-size:40px">Our Adivsors</h3>
+         </div>
+
+                <div class="row">
+
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/kamal.jpg')}}" alt="Card image cap">
+                      <div class="card-text">
+                          <h5 class="card-title"><b>Kamal Mangal</b></h5>
+                          <p>Anand Niketan Group of Schools<br>Ahmedabad<br> Founder & Chairman</p><br><br><br> <br><br>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card" style="width: 18rem;">
+                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/mahadev.jpg')}}" alt="Card image cap">
+                                          <div class="card-text">
+                                              <h5 class="card-title"><b>Mahadev Desai</b></h5>
+                                            <p>Secretary,Vanche Gujarat headed by NaMo.<br>Member National Ex Committee Gandhi 150.<br>PP,Sayaji Lib.<br>Mission:Reading movement,Teacher-Torch Bearer proj Founder: gharpedia</p>
+
+                                          </div>
+                                    </div>
+                    </div>
+
+
+
+
+                  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card" style="width: 18rem;">
+                                  <img class="card-img-top" src="{{url_for('static',filename='assets/img/gjjubhaibharad.jpg')}}" alt="Card image cap">
+                                  <div class="card-text">
+                                      <h5 class="card-title"><b>Gjjubhai Bharad</b></h5>
+                                      <p>The founder of Bharad Schools, Shri Gijubhai Bharad is a well known name not just in Gujarat but also within and outside the country.</p>
+                                      <br><br><br> <br>
+                                  </div>
+                        </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card" style="width: 18rem;">
+                              <img class="card-img-top" src="{{url_for('static',filename='assets/img/narayan.jpg')}}" alt="Card image cap">
+                                  <div class="card-text">
+                                                                          <h5 class="card-title"><b>Narayan Meghani</b></h5>
+                                                                          <p>Green field project Management<br> Supply chain<br>Pharmaceutical product development and regulatory compliance<br> Corporate social responsibility in the area of Education, Health and Sanitation, community awareness. </p>
+
+                                 </div>
+                            </div>
+                  </div>
+
+
+
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card" style="width: 18rem;">
+                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/harshadpatel.jpg')}}" alt="Card image cap">
+                                          <div class="card-title">
+                                             <h5 class="card-title"><b>Dr Harshad Patel</b></h5>
+                                             <p>Municipal School Board, Ahmedabad:-->Vice-Chairman</p>
+                                             <p>Chief Minister Office,Government of Gujarat:-->Special Officer for media</p>
+                                             <br><br><br><br><br><br>
+                                          </div>
+                                    </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card" style="width: 18rem;">
+                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/vrajesh.JPG')}}" alt="Card image cap">
+                                          <div class="card-text">
+                                                                                          <h5 class="card-title"><b>Dr Vrajesh Parikh</b></h5>
+                                            <p>Educationist,Environmentalist<br>UN Volunteer,STEM mentor<br>Entrepreneur<br>MoC(AIM)<br>Ambassador,Luminary Leader|Counselor</p>
+                                            <br><br><br><br><br><br><br>
+                                          </div>
+                                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card" style="width: 18rem;">
+                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/KR.jpg')}}" alt="Card image cap">
+                                          <div class="card-text">
+                                              <h5 class="card-title"><b>Shri Uday Desai</b></h5>
+                                            <p>Uday Desai has been working with eInfochips since 2010 and currently heads up Dr. K. R. Shroff Foundation<br> In the past, Shri  Uday  Desai was associated with GSWAN project, eGovernance infrastructure of Gujarat Government, from 2002 to 2008, where his major responsibility was Network planning, deployment and monitoring the performance of entire IT infrastructure of the state.</p>
+
+                                          </div>
+                                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card" style="width: 18rem;">
+                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/dilip.JPG')}}" alt="Card image cap">
+                                          <div class="card-text">
+                                                                                          <h5 class="card-title"><b>Shree Dilip Buha</b></h5>
+                                            <p>K.P college of Commerce<br>Managing Director,Surat<br>Developed many Schools as a Campus Director<br>Social Director at Surat,Gujarat</p>
+                                            <br><br><br><br><br><br><br>
+                                          </div>
+                                    </div>
+                    </div>
+
+                </div>
+      </div>
+    </section><!-- End Team Section -->
+
     <!-- ======= Features Section ======= -->
     <center style="font-size:40px"><b style="color:#413E66">Process To Increase Student's Learning Level</b></center>
     <section id="features" class="features">
       <div class="container" data-aos="fade-up">
 
-        <div class="row feature-item">
+        <div class="row feature-item" >
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
 
             <img src="{{url_for('static',filename='assets/img/space.JPG')}}" width="900px" height="800px" class="img-fluid" alt="centered image" >
@@ -676,6 +791,7 @@
                                                     Government school with implementing partners<br>-->As a Resource In Charge<br>-->Team Leader for Government intervention program</p>
                                                                                                   <center style="font-size:15px"><u>Years of Experience</u></center>
                                                                               <p>22 years</p>
+<br>
                                           </div>
                                     </div>
                   </div>
@@ -695,9 +811,10 @@
                                             B. Sc. Biochemistry.</p>
                            <center style="font-size:15px"><u>Nature of work</u></center>
                            <p>--> Handling Operations <br>-->Curriculum Head<br>-->Data Management</p>
+                           <br><br><br><br><br><br><br><br>
                            <center style="font-size:15px"><u>Years of Experience</u></center>
                           <p>22 years</p>
-                          <br><br><br><br><br><br><br><br>
+<br>
 
                       </div>
                     </div>
@@ -710,16 +827,17 @@
                                   <div class="card-body">
                                       <h5 class="card-title"><b>Mrs Jyoti Shah</b></h5>
                                       <center style="font-size:15px"><u>Qualification</u></center>
-                                      <p class="card-text">M.Sc. Mathematics <br>
-                                                        PGDCA</p>
-                                                        B.Ed.<br><br/><br/><br/><br/><br/>
+                                      <p class="card-text">M.Sc. Mathematics. <br>
+                                                        PGDCA.<br>
+                                                        B.Ed.</p><br><br/><br/><br/><br/><br/>
                                       <center style="font-size:15px"><u>Nature of work</u></center>
                                        <p>--> Team leader for high school program <br>-->Curriculum Design and learning material development for
                                                 Math up to high school<br>-->As a math teacher in school</p>
                     <!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                      <br><br><br>
                                       <center style="font-size:15px"><u>Years of Experience</u></center>
                                       <p>15 years</p>
-                                      <br><br><br><br>
+<br>
                                   </div>
                         </div>
                   </div>
@@ -738,9 +856,10 @@
                                                                      <p>--> Educational Specialist, Mind spark Language as a Content
                                     Developer and Teacher Trainer <br>-->Curriculum Design and learning material development for
                                     Elementary Language<br>-->Teacher training</p>
+                                                                           <br><br>
                                                                           <center style="font-size:15px"><u>Years of Experience</u></center>
-                                                              <p>12 years</p>
-                                                              <br><br>
+                                                              <p>12 years</p><br>
+
 
                                  </div>
                             </div>
@@ -780,16 +899,17 @@
                                                                                           <h5 class="card-title"><b>Mrs.Parul Joshi</b></h5>
                                                                                          <center style="font-size:15px"><u>Qualification</u></center>
                                                                                         <p>M.A.(English)</p>
-                                            <!--                                            <p class="card-text">.</p>-->
+                                           <br><br>
                                                                                          <center style="font-size:15px"><u>Nature of work</u></center>
                                                                              <p>-->Educational Specialist, English Language as a Content
 
                                             Developer and Teacher Trainer<br>--Oversight field operations for effective implementation of
                                             school program.<br>-->Curriculum Design and learning material development for
-                                            Elementary Language</p>
+                                            Elementary Language</p> <br>
                                                                                           <center style="font-size:15px"><u>Years of Experience</u></center>
-                                                                      <p>15 years</p>
-                                                                      <br><br><br>
+
+                                            <p>15 years</p>
+
 
                                           </div>
                                     </div>
@@ -804,15 +924,15 @@
                                                                                         <p>B.Sc.
                                             B.Ed.
                                             MCA</p>
-                                            <!--                                            <p class="card-text">.</p>-->
+                                             <br><br>
                                                                                          <center style="font-size:15px"><u>Nature of work</u></center>
                                                                              <p>-->Educational Specialist, English Language as a Content
 
                                             Developer and Teacher Trainer<br>--Curriculum Design and learning material development for
-                                            Elementary Language.</p>
+                                            Elementary Language.</p><br><br><br><br>
                                                                                           <center style="font-size:15px"><u>Years of Experience</u></center>
                                                                       <p>20 years</p>
-                                                                      <br><br><br><br><br><br>
+
 
                                           </div>
                                     </div>
@@ -832,10 +952,9 @@
                                                                                              <center style="font-size:15px"><u>Nature of work</u></center>
                                                                                  <p>-->Curriculum Design and learning material development for
                                                 Math up to high school<br>--Training of people with various capacities and roles to
-                                                implement education program for underprivileged children..</p>
+                                                implement education program for underprivileged children..</p><br><br><br><br>
                                                                                               <center style="font-size:15px"><u>Years of Experience</u></center>
-                                                                          <p>12 years</p>
-                                                                          <br><br><br><br><br>
+                                                                          <p>12 years</p><br>
 
                                           </div>
                                     </div>
@@ -888,40 +1007,38 @@
               <div class="col-sm-6">
 
                 <div class="footer-info">
-                  <p style="font-size:25px" ><b>Arya Consultancy</b></p>
+                  <p style="font-size:30px" ><b>Arya Consultancy</b></p><br>
                   <p style="color:#008B8B">" To enhance quality of education and holistic development of the underprivileged children across Gujarat State. "</p>
                 </div>
 
                 <div class="footer-newsletter">
                   <h4></h4>
                   <p></p>
-             <!--     <form action="" method="">
-                    <input type="email" name="email"><input type="submit" value="Subscribe">
-                  </form>
-             --></div>
+             </div>
 
               </div>
 
               <div class="col-sm-6">
                 <div class="footer-links">
-                  <h4>Useful Links</h4>
+                  <h4 style="font-size:30px">Useful Links</h4>
                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#team">Team</a> </li>
-                    <li><a href="#portfolio">Our Work</a> </li>
+                    <li style="font-size:20px"><a href="#">Home</a></li>
+                    <li style="font-size:20px"><a href="#about">About us</a></li>
+                    <li style="font-size:20px"><a href="#team">Team</a> </li>
+                    <li style="font-size:20px"><a href="#portfolio">Our Work</a> </li>
                   </ul>
                 </div>
 
                 <div class="footer-links">
-                  <h4>Contact Us</h4>
+                  <h4 style="font-size:30px">Contact Us</h4>
                   <p>
-                    <u>Registered office</u>:<br>B/45,Akash Bunglow, Kalikund-Saroda road,
-                     kalikund,Dholka<br>
-                    <u>Branch</u>:<br>Q/3,Kenyug Apartment,Opp,Yogashrm Society,Shyamal cross road<br>Satellite,Ahmedabad-380015<br>
+                    <u style="font-size:20px"><span style="font-size:30px">&#9751;</span>Registered office</u>:<br>B/45,Akash Bunglow, Kalikund-Saroda road,
+                     kalikund,Dholka<br><br>
+                    <u style="font-size:20px"><span style="font-size:30px">&#9750;</span>Branch</u>:<br>Q/3,Kenyug Apartment,Opp,Yogashrm Society,Shyamal cross road<br>Satellite,Ahmedabad-380015<br><br>
 
-                    <strong><u>Phone</u>:</strong>(+91) 8980005950,9427308943,9898585452<br>
-                    <strong><u>Email</u>:</strong><br>aryaconsultancygujarat@gmail.com<br>
+                    <strong style="font-size:20px"><span style="font-size:30px">&#9990;</span><u>Phone</u>:</strong>(+91) 8980005950,9427308943,9898585452<br><br>
+                    <span style="font-size:30px">&#9993;</span>
+                    <strong style="font-size:20px"><u>Email</u>:</strong><br>aryaconsultancygujarat@gmail.com<br>
                   </p>
                 </div>
 
