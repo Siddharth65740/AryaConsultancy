@@ -4,34 +4,98 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>Arya Consulatancy </title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
  <!-- Favicons -->
-  <link href="{{ url_for('static',filename='assets/img/logo1.jpg')}}" rel="icon">
-  <link href="{{ url_for('static',filename='assets/img/logo1.jpg')}}" rel="apple-touch-icon">
+  <link href="static/assets/img/logo1%20(1)_1_11zon.jpg" rel="icon">
+  <link href="static/assets/img/logo1%20(1)_1_11zon.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{ url_for('static',filename='assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-  <link href="{{ url_for('static',filename='assets/vendor/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
-  <link href="{{ url_for('static',filename='assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
-  <link href="{{ url_for('static',filename='assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  <link href="{{ url_for('static',filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
 
 
   <!-- Template Main CSS File -->
-  <link href="{{ url_for('static',filename='assets/css/style.css')}}" rel="stylesheet">
+  <link href="static/assets/css/style.css" rel="stylesheet">
 
 
-<!--    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <style>
+  <!-- =======================================================
+  * Template Name: Arya Consultancy- v2.2.0
+  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media only  screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media  only screen and (min-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
         .Portfolio {
                         position: relative;
                         margin: 2px;
@@ -91,47 +155,32 @@
     50%{opacity:1}
 
 }
+
     </style>
-
-
-
-
-
-  <!-- =======================================================
-  * Template Name: Arya Consultancy- v2.2.0
-  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 
 </head>
 
 <body>
 
 
-
-
-  <div id="topbar" class="d-none d-lg-flex align-items-end fixed-top topbar-transparent">
-    <div class="container d-flex justify-content-end">
-
-    </div>
-  </div>
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-transparent">
     <div class="container d-flex align-items-center">
-        <link href="static/assets/img/logo1.jpg" rel="icon">
-<!--        <img src="{{ url_for('static',filename='assets/img/logo1.jpg')}}"  height="30px" width="20px" rel="apple-touch-icon">-->
-        <p  style="text-shadow:1px 1px black"  class="logo mr-auto"><b><img src="{{ url_for('static',filename='assets/img/logo1.jpg')}}" alt="" width="60px">Arya</b><br><b> Consultancy</b></p>
+        <link href="static/assets/img/logo1%20(1)_1_11zon.jpg" rel="icon">
+
+        <p  style="text-shadow:1px 1px black"  class="logo mr-auto"><b>
+            <img src="static/assets/img/logo1%20(1)_1_11zon.jpg" alt="" width="60px">
+            Arya</b><br><b> Consultancy</b></p>
+
 
       <nav class="main-nav d-none d-lg-block">
         <ul>
 
-            <li class="active"><a href="{{url_for('index')}}"><b>Home</b></a></li>
+            <li class="active"><a href="index.html"><b>Home</b></a></li>
             <li><a href="#about"><b>About Us</b></a></li>
 
             <li><a href="#services"><b>Programs/Projects</b></a></li>
-            <li><a href="#advisor"><b>Our Advisor</b></a></li>
+            <li><a href="#advisor"><b>Our Mentors</b></a></li>
             <li><a href="#portfolio"><b>Our Work</b></a></li>
             <li><a href="#team"><b>Team</b></a></li>
             <li><a href="#footer"><b>Contact Us</b></a></li>
@@ -146,19 +195,17 @@
     </div>
   </header><!-- End Header -->
 
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="cle arfix">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
-            <h2 style="font-size:40px"><b>The Most<br>reliable <span>and experienced educational consultancy!</span></b></h2>
-          <!--<div>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          </div>-->
+            <h2 style="font-size:25px"><b>'To enhance quality of education and holistic development<span> of the underprivileged children across India.'</span></b></h2>
         </div>
 
         <div class=" col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="static/assets/img/topimage.jpg"  width="600"  height="900" alt="" class="img-fluid">
+          <img src="static/assets/img/topimage_5_11zon.jpg"  width="600"  height="900" alt="" class="img-fluid">
         </div>
       </div>
 
@@ -175,40 +222,43 @@
 
           <div class="col-lg-5 col-md-6">
             <div class="about-img" data-aos="fade-right" data-aos-delay="100">
-              <img src="static/assets/img/capture.jpg" alt="">
+              <img src="static/assets/img/Capture.JPG" alt="">
             </div>
           </div>
 
           <div class="col-lg-7 col-md-6">
             <div class="about-content" data-aos="fade-left" data-aos-delay="100">
               <h2><center style="font-size:40px">About us</center></h2>
-                <center style="font-size:30px" ><b style="text-shadow:2px 2px black;"><u>VISION</u></b></center><p style="color:#008B8B;"><b><br>"To prepare and motivate our students for a rapid changing world by intilling in them critical thinking skills a global prospective  and a respect for core values of honesty loyalty preservance and compassion.Student will have success for today and be preapred for tommorrow."</b></p>
+                <center style="font-size:30px" ><b style="text-shadow:2px 2px black;"><u>VISION</u></b></center><p style="color:#008B8B;"><b><br>"To prepare and motivate our students for a rapid changing world by instilling in them critical thinking skills a global prospective  and a respect for core values of honesty loyalty perseverance and compassion. Student will have success for today and be prepared for tomorrow."</b></p>
                 <center style="font-size:30px"><b style="text-shadow:2px 2px black;"><u>MISSION</u></b></center>
                 <p><b>Engagement.... Discovery.. Learning..</b></p>
-                    <p style="color:#008B8B;"><b>"When learning  is purposeful,creativity blossoms.When creactivtiy blossoms thinking emanates.When thinking emanates knowledge is fully lit.When knowledge is lit, economy flourishes"</p>
-              <p>We have been working closely with Gov./Non gov. & CSR initiatives as an Implementing agency with: </p>
+                    <p style="color:#008B8B;"><b>"When learning  is purposeful,creativity blossoms.When creativity blossoms thinking emanates.When thinking emanates knowledge is fully lit.When knowledge is lit, economy flourishes"</p>
+              <p>We have been working closely with Gov.,
+                NGOs and Company’s CSR initiatives as an
+                implementing agency with: </p>
 
               <ul>
-                <li><i class="ion-android-checkmark-circle"></i>Torrent Group (March, 2016)</li>
-                <li><i class="ion-android-checkmark-circle"></i>Concord Biotech Ltd. (April, 2017).</li>
-                <li><i class="ion-android-checkmark-circle"></i>Hindustan Gum & Camicals Ltd. (April, 2017).</li>
-                <li><i class="ion-android-checkmark-circle"></i>Shri Jagdamba Polymers Ltd. (Feb.,2017).</li>
-                <li><i class="ion-android-checkmark-circle"></i>Eris Lifesciences Ltd. (Dec., 2016).</li>
-                <li><i class="ion-android-checkmark-circle"></i>YUVA Unstoppable (June 2017).</li>
-                <li><i class="ion-android-checkmark-circle"></i>AIA Engineering Ltd. (May, 2017).</li>
-                <li><i class="ion-android-checkmark-circle"></i>F.D Promary Schools.</li>
-                <li><i class="ion-android-checkmark-circle"></i>Sanjeevani Health and Relief Committe.</li>
-                <li><i class="ion-android-checkmark-circle"></i>Centre Square Founndation.</li>
-                <li><i class="ion-android-checkmark-circle"></i>H3 Pre School-Anand Niketan group of Schools.</li>
-                <li><i class="ion-android-checkmark-circle"></i>Humankind Organization.</li>
-                <li><i class="ion-android-checkmark-circle"></i>Om Jagdamba Foundation-Shree Jagadamba Polymers Ltd.</li>
-                <li><i class="ion-android-checkmark-circle"></i>Welspun Foundation For health and Knowledge-Welspun India ltd.</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Concord Biotech Ltd.</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Hindustan Gum & Chemicals Ltd.</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Eris Lifesciences Ltd. </li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;YUVA Unstoppable </li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;AIA Engineering Ltd. </li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;The F.D. Education Society (F.D.Schools).</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Sanjeevani Health and Relief Committee.</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Centre Square Foundation(CSF).</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;H3 Pre School- Mentored by Anand Niketan Group of Schools.</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Humankind - Non-governmental organization in Ahmedabad, Gujarat.</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Om Jagdamba Foundation-Shri Jagadamba Polymers Ltd.</li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Welspun Foundation For health and Knowledge(WFHK)-Wlespun Group.
+                </li>
+                <li><i class="ion-android-checkmark-circle"></i>&nbsp;Technology &amp; Solutions Development Group-IL&FS.
+                </li>
               </ul>
                 <center style="font-size:30px"><p style="text-shadow:2px 2px black"><u>Core Values</u></p></center>
                 <ul>
                     <li>1) Quality in achievements and learning.</li>
-                    <li>2) Intergrity in professional relations and in leadership </li>
-                    <li>3) Respect for local poilices,people and planet</li>
+                    <li>2) Integrity in professional relations and in leadership </li>
+                    <li>3) Respect for local policies,people and planet</li>
                     <li>4) Commitment to quality education  for all</li>
                     <li>5) Innovation in facing  complex  challenges</li>
                 </ul>
@@ -238,14 +288,14 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title" ><a href="student" >Students </a></h4>
+              <h4 class="title" ><a href="Student.html" >Students </a></h4>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="teacher">Teachers</a></h4>
+              <h4 class="title"><a href="Teachers.html">Teachers</a></h4>
 
             </div>
           </div>
@@ -253,14 +303,14 @@
           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="box">
               <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="employees">Employees</a></h4>
+              <h4 class="title"><a href="Employee.html">Employees</a></h4>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon" style="background: #eafde7;"><i class="ion-ios-analytics-outline" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="parents">Parents</a></h4>
+              <h4 class="title"><a href="parents.html">Parents</a></h4>
 
             </div>
           </div>
@@ -268,7 +318,7 @@
           <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon" style="background: #eafde7;"><i class="ion-ios-bookmarks-outline" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="covid">COVID-19</a></h4>
+              <h4 class="title"><a href="covid.html">COVID-19</a></h4>
 
             </div>
           </div>
@@ -276,7 +326,7 @@
           <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon" style="background: #eafde7;"><i class="ion-ios-paper-outline" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="smc">SMC Training</a></h4>
+              <h4 class="title"><a href="smc.html">SMC Training</a></h4>
 
             </div>
           </div>
@@ -284,21 +334,21 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title" ><a href="translation" >Translation,Lesson planning and Creative work</a></h4>
+              <h4 class="title" ><a href="translation.html" >Translation,Lesson planning and Creative work</a></h4>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title" ><a href="planning" >Pre-School Planning</a></h4>
+              <h4 class="title" ><a href="planning.html" >Pre-School Planning</a></h4>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title" ><a href="upgradation" >Aganwadi Upgradation and Training</a></h4>
+              <h4 class="title" ><a href="upgradation.html" >Aganwadi Upgradation and Training</a></h4>
             </div>
           </div>
 
@@ -321,13 +371,13 @@
 
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="why-us-img">
-              <img src="{{url_for('static',filename='assets/img/B15.jpg')}}" width="600px" height="400px" alt="" class="img-fluid">
+              <img src="static/assets/img/B15_28_11zon.jpg" width="600px" height="400px" alt="" class="img-fluid">
             </div>
           </div>
 
           <div class="col-lg-6">
             <div class="why-us-content">
-                <p><b style="color:#008B8B">We are the first company in India to introduce Holistic Development Program (HDP) targeted towards government schools of Gujarat based on Blended Interactive Learning methodology. HDP’s main focus is students in standard 1 to 8 (Primary Education) where we help them build necessary life-skills during the time they spend at school.</b></p>
+                <p><b style="color:#008B8B">We are the first time to introduce Holistic Development Program (HDP) targeted towards government schools of Gujarat based on Blended Interactive Learning methodology. HDP’s main focus is students in standard 1 to 8 (Primary Education) where we help them build necessary life-skills during the time they spend at school.</b></p>
 
 
               <div class="features clearfix" data-aos="fade-up" data-aos-delay="100">
@@ -341,20 +391,25 @@
               <div class="features clearfix" data-aos="fade-up" data-aos-delay="200">
                 <i class="fa fa-object-group" style="color: #ffb774;"></i>
 <!--                <h4>Eum ut aspernatur</h4>-->
-                <p><b>We have six offices in Ahmedabad including our R&D Lab.
-                          Our current employee strength is 70+ and we are in the
-                          process of hiring 20+ employees in 2017 for new product
-                          development and expansion of our operations in other parts
-                    of Gujarat and India..</b></p>
               </div>
 
               <div class="features clearfix" data-aos="fade-up" data-aos-delay="300">
-                <i class="fa fa-language" style="color: #589af1;"></i>
+              <!--  <i class="fa fa-language" style="color: #589af1;"></i>-->
 <!--                <h4>Voluptates dolores</h4>-->
-                <p><b>Researched 250+ government schools from Rural and
-                    Urban area of Gujarat to understand the real issues of
-                    these schools and presented the report at “Ed Leadership
-                    World Education Conference” in 2015.</b></p>
+                <!--<p><b>Researched 250+ government schools from Rural and-->
+                <!--    Urban area of Gujarat to understand the real issues of-->
+                <!--    these schools and presented the report at “Ed Leadership-->
+                <!--    World Education Conference” in 2015.</b></p>-->
+
+                <p style="font-size:20px"><b>Why Choose us because:</b></p>
+                <ul>
+                    <li style="text-color:#555186">We have over 20 years of experience</li>
+                    <li style="font-color:#555186">Expert advice for CSR program/project</li>
+                    <li style="font-color:#555186">More than 10-15 years of experience experts in each field</li>
+                    <li style="font-color:#555186">Closely work in ground level and monitoring properly</li>
+                    <li style="font-color:#555186">Exceptional service throughout of project/program, from start to completed</li>
+                    <li style="font-color:#555186">Reliable and quality service provider in field of education, health and awareness</li>
+                </ul>
               </div>
 
             </div>
@@ -378,7 +433,7 @@
     <section id="advisor" class="advisor section-bg">
       <div class="container" data-aos="fade-up">
          <div class="section-header">
-            <h3 style="font-size:40px">Our Adivsors</h3>
+            <h3 style="font-size:40px">Our Mentors And Advisors</h3>
          </div>
 
                 <div class="row">
@@ -386,20 +441,29 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/kamal.jpg')}}" alt="Card image cap">
+                      <img class="card-img-top" src="static/assets/img/kamal_7_11zon.jpg" alt="Card image cap">
                       <div class="card-text">
-                          <h5 class="card-title"><b>Kamal Mangal</b></h5>
-                          <p>Anand Niketan Group of Schools<br>Ahmedabad<br> Founder & Chairman</p><br><br><br> <br><br>
+                          <h5 class="card-title"><p style="color:#6495ED"><b> Shree Kamal Mangal</b></p></h5>
+                          <p>Founder and Chairman of Anand Niketan
+                                Group of Schools is a prominent name in
+                                the filed of education. His incessant passion
+                                for the education area designing a 2020
+                                education system.</p><br><br><br> <br><br>
                       </div>
                     </div>
                   </div>
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/mahadev.jpg')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/mahadev_6_11zon.jpg" alt="Card image cap">
                                           <div class="card-text">
-                                              <h5 class="card-title"><b>Mahadev Desai</b></h5>
-                                            <p>Secretary,Vanche Gujarat headed by NaMo.<br>Member National Ex Committee Gandhi 150.<br>PP,Sayaji Lib.<br>Mission:Reading movement,Teacher-Torch Bearer proj Founder: gharpedia</p>
+                                              <h5 class="card-title"><p style="color:#6495ED"><b> Shree Mahadev Desai</b></p></h5>
+                                                                                        <p>Secretary, Vanche Gujarat headed by
+                                            Gujarat Government, Member National Ex
+                                            Committee Gandhi-150.PP of Sayaji Library
+                                            mission reading and well-known
+
+                                            educationist and facilitator.</p>
 
                                           </div>
                                     </div>
@@ -410,10 +474,15 @@
 
                   <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="card" style="width: 18rem;">
-                                  <img class="card-img-top" src="{{url_for('static',filename='assets/img/gjjubhaibharad.jpg')}}" alt="Card image cap">
+                                  <img class="card-img-top" src="static/assets/img/gjjubhaibharad_4_11zon.jpg" alt="Card image cap">
                                   <div class="card-text">
-                                      <h5 class="card-title"><b>Gjjubhai Bharad</b></h5>
-                                      <p>The founder of Bharad Schools, Shri Gijubhai Bharad is a well known name not just in Gujarat but also within and outside the country.</p>
+                                      <h5 class="card-title"><p style="color:#6495ED"><b> Shree Gijubhai Bharad</b></p></h5>
+                                      <p>He is founder of Bharad Schools. Former
+President of India Dr. APJ Abdul Kalam has
+praised and congratulated on his work-
+related science &amp; scientific learning
+methods in Gujarat. He is writer,
+philosopher and mentor.</p>
                                       <br><br><br> <br>
                                   </div>
                         </div>
@@ -421,10 +490,16 @@
 
                   <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div class="card" style="width: 18rem;">
-                              <img class="card-img-top" src="{{url_for('static',filename='assets/img/narayan.jpg')}}" alt="Card image cap">
+                              <img class="card-img-top" src="static/assets/img/narayan_30_11zon.jpg" alt="Card image cap">
                                   <div class="card-text">
-                                                                          <h5 class="card-title"><b>Narayan Meghani</b></h5>
-                                                                          <p>Green field project Management<br> Supply chain<br>Pharmaceutical product development and regulatory compliance<br> Corporate social responsibility in the area of Education, Health and Sanitation, community awareness. </p>
+                                                                          <h5 class="card-title"><p style="color:#6495ED"><b> Shree Narayan Meghani</b></p></h5>
+                                                                          <p>Former Vice President (VP) of CSR
+department – Torrent Group. Managing
+community projects in segments of
+education, health and integrated rural
+development. Hindu Spiritual and Service
+Foundation (HSSF) and IMCTF Gujarat state
+Secretary &amp; central committee member.. </p>
 
                                  </div>
                             </div>
@@ -435,11 +510,14 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/harshadpatel.jpg')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/harshadpatel_6_11zon.jpg" alt="Card image cap">
                                           <div class="card-title">
-                                             <h5 class="card-title"><b>Dr Harshad Patel</b></h5>
-                                             <p>Municipal School Board, Ahmedabad:-->Vice-Chairman</p>
-                                             <p>Chief Minister Office,Government of Gujarat:-->Special Officer for media</p>
+                                             <h5 class="card-title"><p style="color:#6495ED"><b>Dr.Harshad Patel</b></p></h5>
+                                             <p>Former Vice Chairman – Municipal School
+Board- Ahmedabad.
+Vice Chancellor in Indian Institute of
+Teacher Education (IITE), Gandhinagar.
+Media cell convener of Gujarat-BJP</p>
                                              <br><br><br><br><br><br>
                                           </div>
                                     </div>
@@ -447,10 +525,14 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/vrajesh.JPG')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/vrajesh_5_11zon.jpg" alt="Card image cap">
                                           <div class="card-text">
-                                                                                          <h5 class="card-title"><b>Dr Vrajesh Parikh</b></h5>
-                                            <p>Educationist,Environmentalist<br>UN Volunteer,STEM mentor<br>Entrepreneur<br>MoC(AIM)<br>Ambassador,Luminary Leader|Counselor</p>
+                                                                                          <h5 class="card-title"><p style="color:#6495ED"><b>Dr.Vrajesh Parikh</b></p></h5>
+                                            <p>Mr. Parikh is young educationist &amp;
+environmentalist. STEM mentor and UN
+volunteer. Luminary Leader &amp; Counselor.
+He is working with Voice Of Earth -Gujarat
+University</p>
                                             <br><br><br><br><br><br><br>
                                           </div>
                                     </div>
@@ -459,10 +541,16 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/KR.jpg')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/KR.JPG" alt="Card image cap">
                                           <div class="card-text">
-                                              <h5 class="card-title"><b>Shri Uday Desai</b></h5>
-                                            <p>Uday Desai has been working with eInfochips since 2010 and currently heads up Dr. K. R. Shroff Foundation<br> In the past, Shri  Uday  Desai was associated with GSWAN project, eGovernance infrastructure of Gujarat Government, from 2002 to 2008, where his major responsibility was Network planning, deployment and monitoring the performance of entire IT infrastructure of the state.</p>
+                                              <h5 class="card-title"><p style="color:#6495ED"><b>Shree Uday Desai</b></p></h5>
+                                            <p>Head of Dr. K.R.Shroff Foundation. He was
+associated with Gujarat State Wide Area
+Network (GSWAN) project, eGovernance
+infrastructure of Gujarat government. He is
+also very heartly working with OASIS –
+Vadodara and their different projects for
+the children..</p>
 
                                           </div>
                                     </div>
@@ -471,10 +559,14 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/dilip.JPG')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/dilip_8_11zon.jpg" alt="Card image cap">
                                           <div class="card-text">
-                                                                                          <h5 class="card-title"><b>Shree Dilip Buha</b></h5>
-                                            <p>K.P college of Commerce<br>Managing Director,Surat<br>Developed many Schools as a Campus Director<br>Social Director at Surat,Gujarat</p>
+                                                                                          <h5 class="card-title"><p style="color:#6495ED"><b>Shree Dilip Buha</b></p></h5>
+                                            <p>Managing Director of sir K.P. College of
+Commerce at Surat. He is social worker,
+Campus Director in International schools.
+He is great humankind and resource person
+to helpful Indian army.</p>
                                             <br><br><br><br><br><br><br>
                                           </div>
                                     </div>
@@ -492,7 +584,7 @@
         <div class="row feature-item" >
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
 
-            <img src="{{url_for('static',filename='assets/img/space.JPG')}}" width="900px" height="800px" class="img-fluid" alt="centered image" >
+            <img src="static/assets/img/space_6_11zon.jpg" width="900px" height="800px" class="img-fluid" alt="centered image" >
           </div>
           <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0" data-aos="fade-left" data-aos-delay="150">
 
@@ -511,7 +603,7 @@
         <h1 style="text-align:center"><b style="color:#413E66">Our Work</b></h1><br>
 <div class="row">
 
-  <div style="center">
+  <div style="align-content: center">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="showall-tab" data-toggle="pill" href="#showall" role="tab" aria-controls="showall" aria-selected="true" style="color:#413E66">Show All</a>
@@ -560,192 +652,205 @@
 <div class="container">
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg11.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K6.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K7.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K8.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K9.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R6.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/L7.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K8.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/L7.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/Q1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M5.jpg')}}" alt=""></div>
-         <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P27.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P26.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P28.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P30.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P31.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P34.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P39.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P40.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/G5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F33.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/A5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B22.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B15.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B10.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B8.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W6.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/E1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/E9.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F6.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v17.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v16.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v15.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v14.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v13.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/V12.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/simg11_8_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/simg2_7_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/k4_16_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/K8_10_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/R1_14_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/R5_12_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/R6_11_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/L7_31_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/K8_10_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/k4_16_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/K3_15_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/tt4_1_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/tt3_2_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/tt2_3_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/tt1_4_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/Q1%20(1)_13_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/CE1%20(1)_35_11zon.jpeg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/CE2_36_11zon.jpeg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/CE4_37_11zon.jpeg" alt=""></div>
+
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/O2_28_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/M3_4_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/O4_29_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/O1_27_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/M5_5_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/C1_30_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/C2_31_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/c3_32_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/c4_33_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/c5_34_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P27_24_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P26_23_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P3_22_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P28_25_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P30_26_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P31_16_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P34_17_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P39_18_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P40_19_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/G5_14_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F2_20_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F5_11_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F33_23_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/A5_25_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/C1_30_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/B22_29_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/B15_28_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/B10_27_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/B8_26_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/C2_31_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/M1_2_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/M2_3_11zon.jpg" alt=""></div>
+
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W1_6_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W2_5_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W3_4_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W4_3_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W5_2_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W6_1_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/c4_33_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/E1_17_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/E9_18_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F3_21_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F1_19_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F5_11_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F6_12_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F4_22_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v17_7_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v16_8_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v15_10_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v14_9_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v13_11_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/V12_12_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/co1_38_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/co2_39_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/co3_40_11zon.jpg" alt=""></div>
 
       </div>
       <div class="tab-pane fade" id="student" role="tabpanel" aria-labelledby="student-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/simg4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/R5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/simg2_7_11zon.jpg" alt=""></div>
+
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/R1_14_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/R5_12_11zon.jpg" alt=""></div>
       </div>
       <div class="tab-pane fade" id="teacher" role="tabpanel" aria-labelledby="teacher-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/L7.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K8.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/K3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/L7_31_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/K8_10_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/k4_16_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/K3_15_11zon.jpg" alt=""></div>
       </div>
       <div class="tab-pane fade" id="tech" role="tabpanel" aria-labelledby="tech-tab">
 
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/tt1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/Q1.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/tt4_1_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/tt3_2_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/tt2_3_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/tt1_4_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/Q1%20(1)_13_11zon.jpg" alt=""></div>
 
       </div>
 
       <div class="tab-pane fade" id="SMC" role="tabpanel" aria-labelledby="smc-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/O1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/O2_28_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/M3_4_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/O4_29_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/O1_27_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/M5_5_11zon.jpg" alt=""></div>
       </div>
 
       <div class="tab-pane fade" id="community" role="tabpanel" aria-labelledby="community-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/c5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/C1_30_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/C2_31_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/c3_32_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/c4_33_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/c5_34_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/CE1%20(1)_35_11zon.jpeg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/CE2_36_11zon.jpeg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/CE4_37_11zon.jpeg" alt=""></div>
       </div>
 
       <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="social-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P27.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P26.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P28.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P30.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P31.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P34.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P39.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P40.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/P40.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P27_24_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P26_23_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P3_22_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P28_25_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P30_26_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P31_16_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P34_17_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P39_18_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/P40_19_11zon.jpg" alt=""></div>
       </div>
 
       <div class="tab-pane fade" id="learning" role="tabpanel" aria-labelledby="learning-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/G5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F33.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/A5.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/G5_14_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F2_20_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F5_11_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F33_23_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/A5_25_11zon.jpg" alt=""></div>
 
       </div>
 
       <div class="tab-pane fade" id="event" role="tabpanel" aria-labelledby="event-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B22.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B15.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B10.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/B8.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/M2.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/C1_30_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/B22_29_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/B15_28_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/B10_27_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/B8_26_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/C2_31_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/M1_2_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/M2_3_11zon.jpg" alt=""></div>
 
       </div>
 
       <div class="tab-pane fade" id="recog" role="tabpanel" aria-labelledby="recog-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W4.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/W6.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/C4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W1_6_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W2_5_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W3_4_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W4_3_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W5_2_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/W6_1_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/c4_33_11zon.jpg" alt=""></div>
 
       </div>
 
       <div class="tab-pane fade" id="students" role="tabpanel" aria-labelledby="students-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/E1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/E9.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F3.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F5.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F6.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/F4.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/E1_17_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/E9_18_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F3_21_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F1_19_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F5_11_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F6_12_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/F4_22_11zon.jpg" alt=""></div>
 
       </div>
 
       <div class="tab-pane fade" id="principal" role="tabpanel" aria-labelledby="principal-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v17.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v16.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v15.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v14.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/v13.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/V12.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v17_7_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v16_8_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v15_10_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v14_9_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/v13_11_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/V12_12_11zon.jpg" alt=""></div>
 
       </div>
       <div class="tab-pane fade" id="covid" role="tabpanel" aria-labelledby="covid-tab">
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO1.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO2.jpg')}}" alt=""></div>
-        <div class="Portfolio"><img class="card-img" src="{{url_for('static',filename='assets/img/CO3.jpg')}}" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/co1_38_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/co2_39_11zon.jpg" alt=""></div>
+        <div class="Portfolio"><img class="card-img" src="static/assets/img/co3_40_11zon.jpg" alt=""></div>
 
 
       </div>
@@ -775,9 +880,9 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/anandsoni.jpg')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/Mr.%20Anand%20Soni_1_11zon.jpg" alt="Card image cap">
                                           <div class="card-body">
-                                              <h5 class="card-title"><b>Mr Anand Soni</b></h5>
+                                              <h5 class="card-title"><b>Mr.Anand Soni</b></h5>
                                              <center style="font-size:15px"><u>Qualification</u></center>
                                             <p>M.A in Education at Tata Institute of Social Sciences.
                                                     B.Ed. with Accountancy &amp; Management from
@@ -798,9 +903,9 @@
 
                   <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/hiral.jpg')}}" alt="Card image cap">
+                      <img class="card-img-top" src="static/assets/img/Mrs.%20Hiral%20Adhyaru_2_11zon.jpg" alt="Card image cap">
                       <div class="card-body">
-                          <h5 class="card-title"><b>Mrs Hiral Adharyu</b></h5>
+                          <h5 class="card-title"><b>Mrs.Hiral Adhyaru</b></h5>
                           <center style="font-size:15px"><u>Qualification</u></center>
                         <p class="card-text">Hubert H. Humphrey Fellow (Fulbright
                                             Scholar),Vanderbilt University, USA.<br>
@@ -823,13 +928,14 @@
 
                   <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="card" style="width: 18rem;">
-                                  <img class="card-img-top" src="{{url_for('static',filename='assets/img/jyoti1.jpg')}}" alt="Card image cap">
+                                  <img class="card-img-top" src="static/assets/img/jyoti_11zon (2).jpg" alt="Card image cap">
                                   <div class="card-body">
-                                      <h5 class="card-title"><b>Mrs Jyoti Shah</b></h5>
+                                      <h5 class="card-title"><b>Mrs.Jyoti Shah</b></h5>
                                       <center style="font-size:15px"><u>Qualification</u></center>
                                       <p class="card-text">M.Sc. Mathematics. <br>
                                                         PGDCA.<br>
-                                                        B.Ed.</p><br><br/><br/><br/><br/><br/>
+                                                        B.Ed.<br><br></p><p><br></p>
+                                                        <p><br></p>
                                       <center style="font-size:15px"><u>Nature of work</u></center>
                                        <p>--> Team leader for high school program <br>-->Curriculum Design and learning material development for
                                                 Math up to high school<br>-->As a math teacher in school</p>
@@ -844,9 +950,9 @@
 
                   <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div class="card" style="width: 18rem;">
-                              <img class="card-img-top" src="{{url_for('static',filename='assets/img/swetalgajjar.jpg')}}" alt="Card image cap">
+                              <img class="card-img-top" src="static/assets/img/swetalgajjar (1).jpg" alt="Card image cap">
                                   <div class="card-body">
-                                                                          <h5 class="card-title"><b>Mrs Shwetal Gajjar</b></h5>
+                                                                          <h5 class="card-title"><b>Mrs.Shwetal Gajjar</b></h5>
                                                                           <center style="font-size:15px"><u>Qualification</u></center>
                                                                         <p class="card-text">M.Phil. (Gujarati)<br>
                                     Diploma in Linguistics.<br>
@@ -870,7 +976,7 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/parulg.jpg')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/Mrs. Parul Ghoghari.jpg" alt="Card image cap">
                                           <div class="card-body">
                                                                                                   <h5 class="card-title"><b>Mrs.Parul Ghoghari</b></h5>
                                                                                                  <center style="font-size:15px"><u>Qualification</u></center>
@@ -894,7 +1000,7 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/parulj.JPG')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/parulj (1).jpg" alt="Card image cap">
                                           <div class="card-body">
                                                                                           <h5 class="card-title"><b>Mrs.Parul Joshi</b></h5>
                                                                                          <center style="font-size:15px"><u>Qualification</u></center>
@@ -917,7 +1023,7 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/nilangv.JPG')}}" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/nilangv (1).jpg" alt="Card image cap">
                                           <div class="card-body">
                                                                                           <h5 class="card-title"><b>Mr.Nilang Vyas</b></h5>
                                                                                          <center style="font-size:15px"><u>Qualification</u></center>
@@ -942,7 +1048,7 @@
 
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card" style="width: 18rem;">
-                                      <img class="card-img-top" src="{{url_for('static',filename='assets/img/parull.jpg')}}" height="200px" alt="Card image cap">
+                                      <img class="card-img-top" src="static/assets/img/parull_15_11zon.jpg" height="200px" alt="Card image cap">
                                           <div class="card-body">
                                                                                               <h5 class="card-title"><b>Mrs.Payal Patel</b></h5>
                                                                                              <center style="font-size:15px"><u>Qualification</u></center>
@@ -973,13 +1079,11 @@
         </header>
 
         <div class="owl-carousel clients-carousel">
-            <p>Schools lens
-              Solutions Pvt. Ltd</p>
-
-            <p>Parivartan Consultancy</p>
-            <p>Jolly Phonetics</p>
-            <p>K.S.R. Sports need</p>
-            <p>OASIS, Vadodara</p>
+            <p style="background-color:orange;">schoolsLENS Solutions Pvt Ltd.</p>
+            <p style="background-color:#99FFFF;">Parivartan Consultancy</p>
+            <p style="background-color:#FF8787">Jolly Phonetics</p>
+            <p style="background-color:pink">K.S.R. Sports need</p>
+            <p style="background-color:#ED94FF">OASIS, Vadodara</p>
 
 
         </div>
@@ -1008,7 +1112,7 @@
 
                 <div class="footer-info">
                   <p style="font-size:30px" ><b>Arya Consultancy</b></p><br>
-                  <p style="color:#008B8B">" To enhance quality of education and holistic development of the underprivileged children across Gujarat State. "</p>
+                  <p style="color:#008B8B">"<b> The Most Reliable and experienced educational consultancy. "</b></p>
                 </div>
 
                 <div class="footer-newsletter">
@@ -1051,7 +1155,7 @@
           </div>
 
          <div class="col-lg-6">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229.51517448423218!2d72.53376265945839!3d23.014855998749706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84d9d32a5dad%3A0xfdadbe90ae33e066!2sPunjab%20National%20Bank!5e0!3m2!1sen!2sin!4v1606124636600!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>         </div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229.51517448423218!2d72.53376265945839!3d23.014855998749706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84d9d32a5dad%3A0xfdadbe90ae33e066!2sPunjab%20National%20Bank!5e0!3m2!1sen!2sin!4v1606124636600!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>         </div>
 
         <div class="container">
           <div class="copyright">
@@ -1071,19 +1175,19 @@
 
  <!-- Vendor JS Files -->
 
-  <script src="{{ url_for('static',filename='assets/vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/php-email-form/validate.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/counterup/counterup.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/venobox/venobox.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='assets/vendor/aos/aos.js')}}"></script>
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
+  <script src="static/assets/js/main.js"></script>
 
 </body>
 
